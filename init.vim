@@ -1,5 +1,9 @@
 " https://mendo.zone/fun/neovim-setup-haskell/
 " more git commands: https://github.com/tpope/vim-fugitive
+
+" fix temp directory
+let $TMP = $TMP.'\'
+
 execute pathogen#infect()
 
 set nocompatible
