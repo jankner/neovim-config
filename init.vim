@@ -75,3 +75,6 @@ au FileType haskell nnoremap <silent> <leader>nr :InteroKill<CR> :InteroOpen<CR>
 " Managing targets
 " Prompts you to enter targets (no silent):
 au FileType haskell nnoremap <leader>nt :InteroSetTargets<CR>
+
+let g:intero_prompt_regex = '[^-]\i*\( \i*\)*>'
+
