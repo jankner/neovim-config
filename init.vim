@@ -78,3 +78,9 @@ au FileType haskell nnoremap <leader>nt :InteroSetTargets<CR>
 
 let g:intero_prompt_regex = '[^-]\i*\( \i*\)*>'
 
+" == Tabular =======================
+
+nnoremap <leader>= :Tabularize /=<CR>
+nnoremap <leader>- :Tabularize /-><CR>
+nnoremap <leader>, :Tabularize /,<CR>
+nnoremap <leader># :Tabularize /#-}<CR>
