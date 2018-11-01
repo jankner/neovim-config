@@ -44,7 +44,7 @@ let g:cabal_indent_section = 2
 
 " == Intero options ===================
 " " Automatically reload on save
-au BufWritePost *.hs InteroReload
+" au BufWritePost *.hs InteroReload
 
 " Lookup the type of expression under the cursor
 au FileType haskell nmap <silent> <leader>t <Plug>InteroGenericType
@@ -84,3 +84,14 @@ nnoremap <leader>= :Tabularize /=<CR>
 nnoremap <leader>- :Tabularize /-><CR>
 nnoremap <leader>, :Tabularize /,<CR>
 nnoremap <leader># :Tabularize /#-}<CR>
+
+" Disable haskell-vim omnifunc
+let g:haskellmode_completion_ghc = 0
+
+" neco-ghc
+autocmd FileType haskell setlocal omnifunc=necoghc#omnifunc 
+let g:necoghc_enable_detailed_browse = 1
+
+" ghcmod-vim
+au FileType haskell nmap <leader>mc :GhcModSplitFunCase<CR>
+au FileType haskell nmap <leader>ms :GhcModSigCodegen<CR>
