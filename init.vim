@@ -8,6 +8,8 @@ execute pathogen#infect()
 
 set nocompatible
 
+set title
+
 set mouse=a
 
 set encoding=utf-8
@@ -28,6 +30,9 @@ map Y y$
 cab W w
 
 map <C-n> :NERDTreeToggle<CR>
+
+noremap <F12> <Esc>:syntax sync fromstart<CR>
+inoremap <F12> <C-o>:syntax sync fromstart<CR>
 
 " == haskell-vim options =============
 let g:haskell_indent_if = 2
